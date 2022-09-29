@@ -1,11 +1,31 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/berry_bush.gd" type="Script" id=1]
 
-[node name="BerryBush" type="Spatial"]
-script = ExtResource( 1 )
+[sub_resource type="SpatialMaterial" id=3]
 
-[node name="CSGBox" type="CSGBox" parent="."]
-width = 1.0
-height = 1.0
-depth = 1.0
+[sub_resource type="CubeMesh" id=1]
+material = SubResource( 3 )
+
+[sub_resource type="CylinderShape" id=2]
+radius = 3.0
+
+[node name="BerryBush" type="Spatial" groups=["berry_bush"]]
+script = ExtResource( 1 )
+days_to_spawn_in = [ 1 ]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 2 )
+
+[node name="InteractionTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+[connection signal="timeout" from="InteractionTimer" to="." method="_on_InteractionTimer_timeout"]
