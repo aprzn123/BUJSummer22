@@ -12,7 +12,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("debug_key"):
 		advance_day()
 	
-	$CanvasLayer/Label.text = "day: %s" %GlobalVariables.current_day + "\n" + "Berries: %s" %GlobalVariables.berries_picked
+	$CanvasLayer/Label.text = "day: %s" %GlobalVariables.current_day + "\n" + "Berries: %s" %GlobalVariables.berries_picked 
 	pass
 
 func advance_day():
