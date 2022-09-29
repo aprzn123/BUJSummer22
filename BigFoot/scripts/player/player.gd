@@ -7,9 +7,11 @@ onready var pivot = $Pivot
 
 var velocity = Vector3.ZERO
 
+signal interacted
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	GlobalVariables.player = self
 
 
 func _process(delta):
@@ -17,6 +19,9 @@ func _process(delta):
 	apply_movement(input_vector, delta)
 	
 	velocity = move_and_slide(velocity)
+	
+	if Input.is_action_just_pressed("interact"):
+		emit_signal("interacted")
 	
 	
 func get_input_vector():
@@ -32,8 +37,9 @@ func apply_movement(vector, delta):
 	velocity.x = vector.x * max_speed
 	velocity.z = vector.z * max_speed
 	
+#	couldn't make it smooth without messing up the mesh's position
 	if vector:
-		var target_position = translation + vector
-		var new_transform = transform.looking_at(target_position, Vector3.UP)
-		pivot.transform  = pivot.transform.interpolate_with(new_transform, max_speed * delta)
+		pivot.look_at(translation + vector, Vector3.UP)
+		pass
+
 	
