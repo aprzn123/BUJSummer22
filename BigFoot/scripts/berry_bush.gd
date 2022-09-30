@@ -41,7 +41,7 @@ func _on_InteractionTimer_timeout():
 	GlobalVariables.berries_picked += 1
 	picked = true
 #	switch to model without berries
-	$MeshInstance.mesh.material.albedo_color = Color.red
+	#$MeshInstance.mesh.material.albedo_color = Color.red
 	
 func change_enabled(boolean:= true):
 	visible = boolean
@@ -53,7 +53,7 @@ func on_new_day():
 		change_enabled(true)
 		picked = false
 #		switch to model with berries
-		$MeshInstance.mesh.material.albedo_color = Color.green
+		#$MeshInstance.mesh.material.albedo_color = Color.green
 	else:
 		change_enabled(false)
 
