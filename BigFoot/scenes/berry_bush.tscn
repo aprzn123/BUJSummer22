@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/berry_bush.gd" type="Script" id=1]
-
-[sub_resource type="SpatialMaterial" id=3]
-
-[sub_resource type="CubeMesh" id=1]
-material = SubResource( 3 )
+[ext_resource path="res://scenes/raspberry_bush.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CylinderShape" id=2]
 radius = 3.0
@@ -14,8 +10,8 @@ radius = 3.0
 script = ExtResource( 1 )
 days_to_spawn_in = [ 1 ]
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 1 )
+[node name="RaspberryBush" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.917639, 0 )
 
 [node name="Area" type="Area" parent="."]
 
