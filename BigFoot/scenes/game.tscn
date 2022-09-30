@@ -35,7 +35,7 @@ depth = 100.0
 material = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 25.0325, 18.4043 )
+transform = Transform( 1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 11.5874, 6.24407, 5.96547 )
 current = true
 
 [node name="BerryBush" parent="." instance=ExtResource( 3 )]
