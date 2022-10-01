@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/berry_bush.gd" type="Script" id=1]
-[ext_resource path="res://scenes/raspberry_bush.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/berry_bushes/Material.material" type="Material" id=2]
+[ext_resource path="res://models/berry_bushes/berry_bush1.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://models/berry_bushes/berry_bush_Raspberry.mesh" type="ArrayMesh" id=4]
 
 [sub_resource type="CylinderShape" id=2]
 radius = 3.0
@@ -10,8 +12,49 @@ radius = 3.0
 script = ExtResource( 1 )
 days_to_spawn_in = [ 1 ]
 
-[node name="RaspberryBush" parent="." instance=ExtResource( 2 )]
+[node name="Bush" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.917639, 0 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("Berries/Berry")
+material/0 = ExtResource( 2 )
+
+[node name="Berries" type="Spatial" parent="Bush"]
+
+[node name="Berry" type="MeshInstance" parent="Bush/Berries"]
+transform = Transform( 0.30776, 0, 0, 0, 0.30776, 0, 0, 0, 0.30776, 0.0745018, 1.15107, 0.590816 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("")
+material/0 = ExtResource( 2 )
+
+[node name="Berry2" type="MeshInstance" parent="Bush/Berries"]
+transform = Transform( 0.281686, 0.0283096, 0.120698, 0, 0.299629, -0.0702773, -0.123974, 0.0643232, 0.274243, 0.0745018, 1.15107, -0.58114 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("")
+material/0 = ExtResource( 2 )
+
+[node name="Berry3" type="MeshInstance" parent="Bush/Berries"]
+transform = Transform( 0.30089, -0.0646646, 0, 0.0646646, 0.30089, 0, 0, 0, 0.30776, 0.708664, 0.876448, -0.0587993 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("")
+material/0 = ExtResource( 2 )
+
+[node name="Berry4" type="MeshInstance" parent="Bush/Berries"]
+transform = Transform( 0.258121, -0.1676, 0, 0.1676, 0.258121, 0, 0, 0, 0.30776, 0.359254, 1.40057, 0.114384 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("")
+material/0 = ExtResource( 2 )
+
+[node name="Berry5" type="MeshInstance" parent="Bush/Berries"]
+transform = Transform( 0.300498, 0.0664646, 0, -0.0664646, 0.300498, 0, 0, 0, 0.30776, -0.737194, 0.773455, -0.303515 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("")
+material/0 = ExtResource( 2 )
+
+[node name="Berry6" type="MeshInstance" parent="Bush/Berries"]
+transform = Transform( 0.300498, 0.0664646, 0, -0.0664646, 0.300498, 0, 0, 0, 0.30776, -0.474657, 1.26549, 0.320607 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("")
+material/0 = ExtResource( 2 )
 
 [node name="Area" type="Area" parent="."]
 
