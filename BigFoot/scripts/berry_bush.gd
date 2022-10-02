@@ -51,6 +51,7 @@ func on_new_day():
 	if GlobalVariables.current_day in days_to_spawn_in:
 		change_enabled(true)
 		picked = false
+		is_being_picked = false
 		$Bush/Berries.visible = true
 	else:
 		change_enabled(false)
