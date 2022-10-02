@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/pine_tree_PineTree_AlbedoTransparency.png-7cd8877986e3bec503a4cd8361f741ef.s3tc.stex"
-path.etc2="res://.import/pine_tree_PineTree_AlbedoTransparency.png-7cd8877986e3bec503a4cd8361f741ef.etc2.stex"
+path.s3tc="res://.import/rock_low_lambert1_AlbedoTransparency.png-f87ab6cc504e491ed9d01f451e60e67f.s3tc.stex"
+path.etc2="res://.import/rock_low_lambert1_AlbedoTransparency.png-f87ab6cc504e491ed9d01f451e60e67f.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/trees/pine_tree/textures/pine_tree_PineTree_AlbedoTransparency.png"
-dest_files=[ "res://.import/pine_tree_PineTree_AlbedoTransparency.png-7cd8877986e3bec503a4cd8361f741ef.s3tc.stex", "res://.import/pine_tree_PineTree_AlbedoTransparency.png-7cd8877986e3bec503a4cd8361f741ef.etc2.stex" ]
+source_file="res://models/forest_items/rocks/textures/rock_low_lambert1_AlbedoTransparency.png"
+dest_files=[ "res://.import/rock_low_lambert1_AlbedoTransparency.png-f87ab6cc504e491ed9d01f451e60e67f.s3tc.stex", "res://.import/rock_low_lambert1_AlbedoTransparency.png-f87ab6cc504e491ed9d01f451e60e67f.etc2.stex" ]
 
 [params]
 
