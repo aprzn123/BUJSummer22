@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/hiker.glb-90016319a570429d1e95c6896e3889a2.scn"
+path="res://.import/hiker01.glb-cf845b691b76607ff01c73c92ee76ec9.scn"
 
 [deps]
 
-source_file="res://models/hiker/hiker.glb"
-dest_files=[ "res://.import/hiker.glb-90016319a570429d1e95c6896e3889a2.scn" ]
+source_file="res://models/hikers/hiker01/hiker01.glb"
+dest_files=[ "res://.import/hiker01.glb-cf845b691b76607ff01c73c92ee76ec9.scn" ]
 
 [params]
 
