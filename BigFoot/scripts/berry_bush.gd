@@ -40,8 +40,7 @@ func cancel_interaction():
 func _on_InteractionTimer_timeout():
 	GlobalVariables.berries_picked += 1
 	picked = true
-#	switch to model without berries
-	#$MeshInstance.mesh.material.albedo_color = Color.red
+	$Bush/Berries.visible = false
 	
 func change_enabled(boolean:= true):
 	visible = boolean
@@ -52,8 +51,8 @@ func on_new_day():
 	if GlobalVariables.current_day in days_to_spawn_in:
 		change_enabled(true)
 		picked = false
-#		switch to model with berries
-		#$MeshInstance.mesh.material.albedo_color = Color.green
+		is_being_picked = false
+		$Bush/Berries.visible = true
 	else:
 		change_enabled(false)
 
