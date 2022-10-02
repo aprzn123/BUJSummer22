@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pine_tree_PineTree_AO.png-56a5ca2b1254b75a41edf4bdaa4c3882.stex"
+path="res://.import/pine_tree_PineTree_AO.png-195acbd6834f54263fc81c720923379d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/trees/pine_tree/textures/pine_tree_PineTree_AO.png"
-dest_files=[ "res://.import/pine_tree_PineTree_AO.png-56a5ca2b1254b75a41edf4bdaa4c3882.stex" ]
+source_file="res://models/forest_items/trees/pine_tree/textures/pine_tree_PineTree_AO.png"
+dest_files=[ "res://.import/pine_tree_PineTree_AO.png-195acbd6834f54263fc81c720923379d.stex" ]
 
 [params]
 

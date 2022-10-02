@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/pine_tree.glb-ddc331d0f26cfd2a439ec69684194b66.scn"
+path="res://.import/rocks.glb-bb82f1c8b7de922cff57d37457db5ef4.scn"
 
 [deps]
 
-source_file="res://models/trees/pine_tree/pine_tree.glb"
-dest_files=[ "res://.import/pine_tree.glb-ddc331d0f26cfd2a439ec69684194b66.scn" ]
+source_file="res://models/forest_items/rocks/rocks.glb"
+dest_files=[ "res://.import/rocks.glb-bb82f1c8b7de922cff57d37457db5ef4.scn" ]
 
 [params]
 
@@ -16,14 +16,14 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
-nodes/use_legacy_names=false
+nodes/use_legacy_names=true
 materials/location=1
-materials/storage=1
-materials/keep_on_reimport=true
+materials/storage=0
+materials/keep_on_reimport=false
 meshes/octahedral_compression=true
 meshes/compress=4286
 meshes/ensure_tangents=true
-meshes/storage=0
+meshes/storage=1
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
 skins/use_named_skins=true
