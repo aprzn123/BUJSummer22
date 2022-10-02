@@ -43,4 +43,7 @@ current = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9593, 0.858735, 0 )
 days_to_spawn_in = [ 1, 2, 3 ]
 
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.918484, 0.156967, -0.362973, 0.0352103, 0.881746, 0.470408, 0.393889, -0.444843, 0.804342, 0, 13.3472, 21.4457 )
+
 [editable path="Player"]
