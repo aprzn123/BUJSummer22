@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://models/hikers/hiker01/import/hiker01.glb" type="PackedScene" id=1]
 [ext_resource path="res://models/hikers/hiker01/textures_and_materials/pants_shorts.tres" type="Material" id=2]
@@ -13,11 +13,13 @@
 [ext_resource path="res://models/hikers/hiker01/hair/hiker01_hair_eyebrows.mesh" type="ArrayMesh" id=11]
 [ext_resource path="res://models/hikers/hiker01/hair/hiker01_hair_thin_eyebrows.mesh" type="ArrayMesh" id=12]
 [ext_resource path="res://models/hikers/hiker01/hair/hiker01_hair_pony_tail.mesh" type="ArrayMesh" id=13]
+[ext_resource path="res://scenes/props/camera.tscn" type="PackedScene" id=14]
 
 [node name="hiker" instance=ExtResource( 1 )]
 
 [node name="Skeleton" parent="Armature" index="0"]
 bones/5/bound_children = [ NodePath("BoneAttachmentHair") ]
+bones/34/bound_children = [ NodePath("BoneAttachmentHand") ]
 
 [node name="Body" parent="Armature/Skeleton" index="0"]
 material/0 = ExtResource( 7 )
@@ -46,7 +48,7 @@ material/0 = ExtResource( 4 )
 material/0 = ExtResource( 2 )
 
 [node name="BoneAttachmentHair" type="BoneAttachment" parent="Armature/Skeleton" index="8"]
-transform = Transform( 0.999253, -0.0370417, 0.0109785, 0.0376491, 0.997393, -0.0615549, -0.0086697, 0.0619223, 0.998043, 0.00531044, 1.40955, 0.0815161 )
+transform = Transform( 0.999562, 0.0240068, -0.017321, -0.0220115, 0.993972, 0.1074, 0.0197948, -0.106971, 0.994065, 0.00515334, 1.43418, -0.051332 )
 bone_name = "Head"
 
 [node name="eyebrows" type="MeshInstance" parent="Armature/Skeleton/BoneAttachmentHair" index="0"]
@@ -76,3 +78,11 @@ material/0 = ExtResource( 9 )
 transform = Transform( 0.999123, 0.019246, 0.0372088, -0.0186589, 0.999697, -0.0160629, -0.0375066, 0.0153544, 0.999179, -0.0320021, -1.44072, 0.0378766 )
 mesh = ExtResource( 10 )
 material/0 = ExtResource( 9 )
+
+[node name="BoneAttachmentHand" type="BoneAttachment" parent="Armature/Skeleton" index="9"]
+transform = Transform( 0.433058, 0.365904, 0.823756, 0.442425, -0.882522, 0.159419, 0.785315, 0.295413, -0.544069, -0.385492, 0.79509, 0.020417 )
+bone_name = "RightHand"
+
+[node name="Camera" parent="Armature/Skeleton/BoneAttachmentHand" index="0" instance=ExtResource( 14 )]
+transform = Transform( -0.0610257, 0.410129, -0.909983, 0.687674, 0.678064, 0.259486, 0.723449, -0.609936, -0.323416, -0.00950667, 0.209318, 0.112972 )
+visible = false
