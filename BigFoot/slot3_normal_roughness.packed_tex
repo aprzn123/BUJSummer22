@@ -1,0 +1,8 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "res://terrain/textures/Stone/T_SandGround_R.png",
+		"rgb": "res://terrain/textures/Stone/T_StoneGround_N.png"
+	}
+}
