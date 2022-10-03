@@ -1,5 +1,7 @@
 extends Node2D
 
+var _warning
+
 var master_bus = AudioServer.get_bus_index("Master")
 var music_bus = AudioServer.get_bus_index("Music")
 var SFX_bus = AudioServer.get_bus_index("SFX")
@@ -71,16 +73,16 @@ func change_volume(bus, value):
 
 
 func _on_ArtNames_meta_clicked(meta):
-	OS.shell_open(meta)
+	_warning = OS.shell_open(meta)
 	
 func _on_AudioNames_meta_clicked(meta):
-	OS.shell_open(meta)
+	_warning = OS.shell_open(meta)
 
 func _on_CodeNames_meta_clicked(meta):
-	OS.shell_open(meta)
+	_warning = OS.shell_open(meta)
 
 func _on_GamedesignNames_meta_clicked(meta):
-	OS.shell_open(meta)
+	_warning = OS.shell_open(meta)
 
 func _on_WritingNames_meta_clicked(meta):
-	OS.shell_open(meta)
+	_warning = OS.shell_open(meta)
