@@ -30,6 +30,4 @@ cast_to = Vector3( 0, -5, 0 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 5 )
 
-[node name="RemoteTransform" type="RemoteTransform" parent="."]
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

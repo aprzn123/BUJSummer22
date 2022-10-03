@@ -15,7 +15,7 @@ var nearby_interactables = []
 
 func _ready():
 	GlobalVariables.player = self
-
+	GlobalVariables.camera_focus = self
 
 func _process(delta):
 	var input_vector = get_input_vector()
