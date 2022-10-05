@@ -1,0 +1,8 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "res://terrain/textures/Grass/T_Grass_Ground_R.png",
+		"rgb": "res://terrain/textures/Grass/T_Grass_Ground_N.png"
+	}
+}

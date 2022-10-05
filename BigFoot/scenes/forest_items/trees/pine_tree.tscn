@@ -2,8 +2,7 @@
 
 [ext_resource path="res://models/forest_items/trees/pine_tree/PineTree.material" type="Material" id=1]
 
-
-[sub_resource type="ArrayMesh" id=1]
+[sub_resource type="ArrayMesh" id=41]
 resource_name = "pine_tree_Cube"
 surfaces/0 = {
 "aabb": AABB( -1.07298, -0.0721486, -1.36423, 2.55136, 6.34576, 2.92943 ),
@@ -40,10 +39,11 @@ height = 5.0
 [node name="PineTree" type="KinematicBody" groups=["pine_tree"]]
 
 [node name="Trunk" type="MeshInstance" parent="."]
-mesh = SubResource( 1 )
+mesh = SubResource( 41 )
 
-[node name="TopBranches" type="MeshInstance" parent="."]
+[node name="TopBranches" type="MeshInstance" parent="Trunk"]
 mesh = SubResource( 2 )
+skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3.67689, 0 )
