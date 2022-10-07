@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 var _warning
 
@@ -13,7 +13,7 @@ func _on_TutorialButton_pressed():
 	go_to_tutorial()
 
 func _on_PlayButton_pressed():
-	get_tree().change_scene("res://scenes/game.tscn")
+	get_tree().change_scene("res://scenes/forest_level.tscn")
 	
 func _on_SettingsButton_pressed():
 	go_to_settings()

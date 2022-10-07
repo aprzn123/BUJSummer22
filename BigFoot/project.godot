@@ -63,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="BigFoot"
-run/main_scene="res://scenes/forest_level.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -77,7 +77,11 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/lod/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/waterways/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/zylann.hterrain/plugin.cfg" )
+
+[global]
+
+frustum=false
 
 [gui]
 
