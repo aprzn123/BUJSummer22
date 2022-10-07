@@ -1,7 +1,7 @@
 extends KinematicBody
 
 export var max_speed = 15
-export var gravity = 70
+export var gravity = 10
 
 onready var pivot = $Pivot
 
@@ -22,7 +22,7 @@ func _process(delta):
 		var input_vector = get_input_vector()
 		apply_movement(input_vector, delta)
 		
-		velocity = move_and_slide(velocity)
+		velocity = move_and_slide_with_snap(velocity, Vector3.DOWN, Vector3.UP, true, 5, deg2rad(50))
 		
 		if Input.is_action_just_pressed("interact"):
 			interact()
@@ -38,9 +38,9 @@ func get_input_vector():
 	
 
 func apply_movement(vector, delta):
+	velocity.y = -gravity
 	velocity.x = vector.x * max_speed
 	velocity.z = vector.z * max_speed
-	
 	cancel_interaction()
 	
 #	couldn't make it smooth without messing up the mesh's position
@@ -49,9 +49,10 @@ func apply_movement(vector, delta):
 		pass
 
 func cancel_interaction():
-	if velocity and selected_interactable in nearby_interactables:
-		if get_node(selected_interactable).has_method("cancel_interaction"):
-			get_node(selected_interactable).cancel_interaction()
+	if velocity.x or velocity.z:
+		if selected_interactable in nearby_interactables:
+			if get_node(selected_interactable).has_method("cancel_interaction"):
+				get_node(selected_interactable).cancel_interaction()
 
 
 func interact():

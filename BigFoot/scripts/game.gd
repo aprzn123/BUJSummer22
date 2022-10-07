@@ -10,11 +10,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("debug_key"):
-		if GlobalVariables.camera_focus != $PineTree:
-			GlobalVariables.change_camera_focus($PineTree, 1)
 		advance_day()
-	
-	$CanvasLayer/Label.text = "day: %s" %GlobalVariables.current_day + "\n" + "Berries: %s" %GlobalVariables.berries_picked 
 	pass
 
 func advance_day():

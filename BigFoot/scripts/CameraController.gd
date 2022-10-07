@@ -12,9 +12,9 @@ func _ready():
 func _process(delta):
 	global_translation = lerp(global_translation, GlobalVariables.camera_focus.global_translation, follow_speed * delta)
 	if Input.is_action_just_released("zoom_in"):
-		change_camera_fov(-10)
+		change_camera_fov(-5)
 	if Input.is_action_just_released("zoom_out"):
-		change_camera_fov(10)
+		change_camera_fov(5)
 
 
 func change_camera_fov(amount):
