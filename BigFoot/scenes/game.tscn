@@ -13,6 +13,7 @@ albedo_color = Color( 0.952941, 0.819608, 0.819608, 1 )
 script = ExtResource( 4 )
 
 [node name="CameraController" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.07837, 0, 16.9433 )
 script = ExtResource( 5 )
 
 [node name="Camera" type="Camera" parent="CameraController"]
