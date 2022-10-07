@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/forest_items/trees/pine_tree_lod2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/forest_items/trees/pine_tree.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/forest_items/trees/pine_tree_lod1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/lod/lod_spatial.gd" type="Script" id=4]
+
+[node name="LODSpatial" type="Spatial"]
+script = ExtResource( 4 )
+lod_0_max_distance = 50.0
+lod_1_max_distance = 100.0
+lod_2_max_distance = 500.0
+
+[node name="PineTree-lod0" parent="." instance=ExtResource( 2 )]
+
+[node name="pine_tree-lod1" parent="." instance=ExtResource( 3 )]
+
+[node name="pine_tree-lod2" parent="." instance=ExtResource( 1 )]
